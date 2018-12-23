@@ -1,0 +1,5 @@
+.nav_items {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
