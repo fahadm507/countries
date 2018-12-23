@@ -1,11 +1,12 @@
 .nav-bar {
-  margin-top: 25px;
-  width: 300px;
+  width: 260px;
+  position: fixed;
+  height: 100%;
+  bottom: 35;
 }
 .nav-list {
   list-style-type: none;
   background-color: #f1f1f1;
-  width: 280px;
 }
 
 .nav-item {

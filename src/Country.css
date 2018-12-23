@@ -1,5 +1,7 @@
 .country-list-card {
-  max-width: 300px;
+  margin: 15px;
+  box-shadow: 18px 6px 5px #8080804d;
+  text-align: center;
 }
 
 .country_flag {

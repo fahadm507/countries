@@ -1,12 +1,11 @@
 .countries-container {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 260px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
-
 .countries-section {
   margin: 10px 15px 10px;
 }

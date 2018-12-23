@@ -71,16 +71,14 @@ class App extends Component {
         <div className="searchBar">
           <SearchBar countrySearch={this.handleCountrySearch} />
         </div>
-
-        <div class="content-wrapper">
+        <React.Fragment>
           <NavBar countriesByRegion={this.filterRegions} />
-
-          <div className="countries-section">
-            <Countries
-              currentCountries={countries}
-              currentRegion={this.state.currentRegion}
-            />
-          </div>
+        </React.Fragment>
+        <div class="content-wrapper">
+          <Countries
+            currentCountries={countries}
+            currentRegion={this.state.currentRegion}
+          />
         </div>
       </div>
     );
