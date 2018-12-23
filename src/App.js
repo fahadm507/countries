@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./NavBar.js";
 import Countries from "./Countries";
 import SearchBar from "./searchBar";
+import "./App.css";
 
 const baseURL = "https://restcountries.eu/rest/v2";
 
@@ -66,18 +67,20 @@ class App extends Component {
     const countries =
       filteredCountries.length > 0 ? filteredCountries : allCountries;
     return (
-      <div class="container">
+      <div className="container">
         <div className="searchBar">
           <SearchBar countrySearch={this.handleCountrySearch} />
         </div>
-        <div className="myNav">
+
+        <div class="content-wrapper">
           <NavBar countriesByRegion={this.filterRegions} />
-        </div>
-        <div className="myCountries">
-          <Countries
-            currentCountries={countries}
-            currentRegion={this.state.currentRegion}
-          />
+
+          <div className="countries-section">
+            <Countries
+              currentCountries={countries}
+              currentRegion={this.state.currentRegion}
+            />
+          </div>
         </div>
       </div>
     );

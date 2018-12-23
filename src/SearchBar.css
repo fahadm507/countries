@@ -1,0 +1,23 @@
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #37a7ff;
+  margin-top: 15px;
+}
+
+.search-bar-input {
+  border: 1px solid #9e9e9e;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  margin: 20px;
+}
+
+input[type="text"] {
+  width: 400px;
+  font-size: inherit;
+  min-height: 30px;
+  margin: 10px;
+  margin: 20px;
+}

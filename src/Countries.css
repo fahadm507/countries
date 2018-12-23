@@ -1,0 +1,12 @@
+.countries-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.countries-section {
+  margin: 10px 15px 10px;
+}

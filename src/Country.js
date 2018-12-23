@@ -5,7 +5,7 @@ class Country extends Component {
     const { country } = this.props;
     return (
       //country details blub here
-      <div className="row">
+      <div className="country-list-card">
         <div className="col-md-4">
           <img
             className="country_flag"
@@ -13,12 +13,11 @@ class Country extends Component {
             title={`${country.name} flag`}
           />
         </div>
-        <div className="col-md-6">
+        <div>
           <h3>{country.name}</h3>
           <p>Region: {country.region} </p>
           <p>subregion: {country.subregion}</p>
           <p>Popluation: {country.population}</p>
-          <button>LEARN MORE</button>
         </div>
       </div>
     );

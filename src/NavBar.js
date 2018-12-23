@@ -10,7 +10,7 @@ class NavBar extends Component {
     const REGIONS = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
     const navItems = REGIONS.map((region, index) => {
       return (
-        <li className="nav_item" key={index}>
+        <li className="nav-item" key={index}>
           <a href="#" onClick={e => this.handleClick(region, e)}>
             {region}
           </a>
@@ -20,7 +20,7 @@ class NavBar extends Component {
 
     return (
       <nav class="nav nav-bar">
-        <ul className="nav_items">{navItems}</ul>
+        <ul className="nav-list">{navItems}</ul>
       </nav>
     );
   }
