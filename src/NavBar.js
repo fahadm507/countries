@@ -4,7 +4,6 @@ import "./NavBar.css";
 class NavBar extends Component {
   handleClick = (region, e) => {
     e.preventDefault();
-    console.log("click detected ", region);
     this.props.countriesByRegion(region);
   };
   render() {

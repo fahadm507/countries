@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-
+import "./Country.css";
 class Country extends Component {
   render() {
-    console.log("props for country ", this.props);
     const { country } = this.props;
     return (
       //country details blub here
       <div className="row">
         <div className="col-md-4">
-          <img src={country.flag} title={`${country.name} flag`} />
+          <img
+            className="country_flag"
+            src={country.flag}
+            title={`${country.name} flag`}
+          />
         </div>
         <div className="col-md-6">
           <h3>{country.name}</h3>

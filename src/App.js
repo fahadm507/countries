@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "./NavBar.js";
 import Countries from "./Countries";
+import SearchBar from "./searchBar";
 
 const baseURL = "https://restcountries.eu/rest/v2";
 
@@ -30,9 +31,21 @@ class App extends Component {
     );
     this.setState({ filteredCountries, currentRegion });
   };
+  //given a search term find a country or region that match that term that term.
+  handleCountrySearch = term => {
+    const countries = [...this.state.allCountries];
+
+    const filteredCountries = countries.filter(country => {
+      term = term.toLowerCase();
+      return (
+        country.name.toLowerCase().startsWith(term) ||
+        country.region.toLowerCase().startsWith(term)
+      );
+    });
+    this.setState({ filteredCountries });
+  };
 
   componentDidMount() {
-    console.log("state of my application", this.state);
     fetch(`${baseURL}/all`)
       .then(response => {
         return response.json();
@@ -54,6 +67,9 @@ class App extends Component {
       filteredCountries.length > 0 ? filteredCountries : allCountries;
     return (
       <div class="container">
+        <div className="searchBar">
+          <SearchBar countrySearch={this.handleCountrySearch} />
+        </div>
         <div className="myNav">
           <NavBar countriesByRegion={this.filterRegions} />
         </div>
